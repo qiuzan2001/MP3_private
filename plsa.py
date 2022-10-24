@@ -51,14 +51,14 @@ class Corpus(object):
         # #############################
 #        pass    # REMOVE THIS
         documentNum = 0
-        doc = self.documents
+        documents = self.documents
         with open(self.documents_path) as file:
             for lines in file.readlines():
                 curr = ''.join([x for x in lines if x in string.ascii_letters + '\'- '])
                 curr = curr.rstrip('\n ')
-                doc = curr.split(' ')
+                documents = curr.split(' ')
                 documentNum += 1
-                self.doc.append(doc)
+                self.documents.append(documents)
                     
             self.number_of_documents = documentNum
             
