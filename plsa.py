@@ -39,6 +39,7 @@ class Corpus(object):
         self.number_of_documents = 0
         self.vocabulary_size = 0
 
+        
     def build_corpus(self):
         """
         Read document, fill in self.documents, a list of list of word
